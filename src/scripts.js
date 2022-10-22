@@ -35,6 +35,7 @@ const calculateTip = () => {
       personTotal.innerText = '$' + totalAmountPerPerson.toFixed(2);
       grandTotal.innerText = '$' + grandTotalValue.toFixed(2);
     }
+    return true;
   };
   if (bill !== 0 && people !== 0 && custom !== 0) {
     const tipAmount = +((bill * custom) / people);
@@ -47,26 +48,6 @@ const calculateTip = () => {
   }
 };
 
-const checkInputs = (inputs) => {
-  let filled = true;
-  inputs.forEach((input) => {
-    if (input.value === '') filled = false;
-  });
-  return filled;
-};
-
-allInputs.forEach((input) => {
-  buttonReset.disabled = true;
-  const inputIsOk = () => {
-    if (checkInputs(allInputs)) {
-      buttonReset.disabled = false;
-    } else {
-      buttonReset.disabled = true;
-    }
-  };
-  input.addEventListener('input', inputIsOk);
-});
-
 window.resetValues = () => {
   tipValue.innerText = '$0.00';
   personTotal.innerText = '$0.00';
@@ -74,7 +55,6 @@ window.resetValues = () => {
   inputBill.value = '';
   inputPeople.value = '';
   customValue.value = '';
-  console.log(inputBill.value);
 };
 
 inputBill.addEventListener('input', calculateTip);
