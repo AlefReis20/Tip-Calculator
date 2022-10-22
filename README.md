@@ -32,7 +32,7 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com by Alef Reis :wave: [Acesse o meu Linkedin!](https://www.linkedin.com/in/alef-reis2022/)
+Feito por Alef Reis :wave: [Acesse o meu Linkedin!](https://www.linkedin.com/in/alef-reis2022/)
 
 
 
