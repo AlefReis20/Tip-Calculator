@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon.png"
+    />
+
+    <link rel="stylesheet" href="./src/css/index.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <img src="./assets/logo.svg" alt="logo" />
+    <div id="container">
+      <main>
+        <div class="bill">
+          <label for="bill">
+            Bill
+            <input id="bill" type="number" placeholder="0" />
+          </label>
+        </div>
+        <div class="container">
+          <p>Select Tip %</p>
+          <button onclick="percentOfTip(this.value)" value="0.05">5%</button>
+          <button onclick="percentOfTip(this.value)" value="0.1">10%</button>
+          <button onclick="percentOfTip(this.value)" value="0.15">15%</button>
+          <button onclick="percentOfTip(this.value)" value="0.25">25%</button>
+          <button onclick="percentOfTip(this.value)" value="0.50">50%</button>
+          <input type="text" id="custom" placeholder="Custom" />
+        </div>
+        <div class="people">
+          <label for="person">
+            Number of People
+            <input id="person" type="number" placeholder="0" />
+          </label>
+        </div>
+      </main>
+      <aside>
+        <div class="tip-amount">
+          <div class="paragraphs">
+            <p>Tip Amount</p>
+            <p class="person">/person</p>
+          </div>
+          <h2>$0.00</h2>
+        </div>
+        <div class="total">
+          <div class="paragraphs">
+            <p>Total</p>
+            <p class="person">/person</p>
+          </div>
+          <h2>$0.00</h2>
+        </div>
+        <div class="grand-total">
+          <div class="paragraphs">
+            <p>Total</p>
+            <p class="grand">/grand</p>
+          </div>
+          <h2>$0.00</h2>
+        </div>
+        <button onclick="resetValues()" id="reset">RESET</button>
+      </aside>
+    </div>
+    <footer>
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+      </p>
+      <p>
+        Coded by
+        <a href="https://www.linkedin.com/in/alef-reis2022/" target="_blank"
+          >Alef Reis</a
+        >.
+      </p>
+    </footer>
+  </body>
+  <script type="module" src="./src/scripts.js"></script>
+</html>

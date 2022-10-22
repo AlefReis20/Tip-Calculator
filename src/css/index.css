@@ -1,0 +1,408 @@
+/* Inicio das configurações gerais*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+/* Fim das configurações gerais*/
+
+@media screen and (min-width: 600px) and (max-width: 1440px) {
+  /* Inicio das configurações padrão*/
+  body {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c5e4e6;
+  }
+
+  input {
+    font-size: 24px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: right;
+    padding: 10px;
+    background-color: #f4f9fa;
+    cursor: pointer;
+  }
+
+  input::placeholder {
+    text-align: right;
+  }
+
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input#bill:focus,
+  input#person:focus,
+  input#custom:focus {
+    border: 1px solid #25bfab;
+  }
+
+  button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+  /* Fim das configurações padrão*/
+
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    width: 600px;
+    height: 350px;
+    gap: 5%;
+  }
+
+  img {
+    align-self: center;
+    justify-self: center;
+  }
+
+  /* Inicio formatação Main */
+  main {
+    display: grid;
+    gap: 10px;
+  }
+
+  main div {
+    display: grid;
+  }
+
+  main label,
+  main p {
+    font-size: 12px;
+    color: #7f9c9e;
+  }
+
+  main div.bill label input {
+    grid-row: 2/3;
+    background: url('../../assets/icon-dollar.svg') no-repeat left;
+    background-position: 10px;
+    background-color: #f4f9fa;
+    height: 40px;
+  }
+
+  main div.container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10px 40px 40px;
+    gap: 10px;
+  }
+
+  main div.container p {
+    grid-column: 1/4;
+    grid-row: 1/1;
+    margin-bottom: 20px;
+  }
+
+  main div.container button {
+    background-color: #00484c;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  main div.container button:hover {
+    background-color: #9fe8e9;
+    color: #00484c;
+    transition: 0.5s;
+  }
+
+  main div.container input::placeholder {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  main div.people label input {
+    background: url('../../assets/icon-person.svg') no-repeat left;
+    background-position: 10px;
+    background-color: #f4f9fa;
+    height: 40px;
+  }
+  /*Fim formatação main*/
+
+  /*Inicio formtação aside*/
+  aside {
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    background-color: #00484c;
+    border-radius: 12px;
+    padding: 25px;
+    align-items: center;
+  }
+
+  aside div.tip-amount,
+  aside div.total,
+  aside div.grand-total {
+    display: grid;
+  }
+
+  aside div.tip-amount h2,
+  aside div.total h2,
+  aside div.grand-total h2 {
+    grid-column: 2/3;
+    font-weight: 700;
+    color: #25bfab;
+    justify-self: end;
+    align-self: center;
+  }
+
+  aside div.paragraphs {
+    align-self: center;
+  }
+
+  aside p {
+    font-size: 14px;
+    color: #ffffff;
+    grid-row: 1/2;
+  }
+
+  aside p.person,
+  aside p.grand {
+    font-size: 10px;
+    color: #7f9c9e;
+  }
+
+  aside button {
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: #9fe8e9;
+    color: #00484c;
+  }
+
+  aside button:disabled {
+    background-color: #0d686d;
+  }
+  /*Fim formatação aside*/
+
+  /*Inicio formatação footer*/
+  footer {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: #0d686d;
+  }
+
+  footer a {
+    color: #00484c;
+  }
+
+  footer a:hover {
+    color: #25bfab;
+    transition: 0.8s;
+    text-decoration: underline;
+  }
+  /*Fim formatação footer*/
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  body {
+    display: grid;
+    background-color: #c5e4e6;
+  }
+
+  input {
+    font-size: 24px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: right;
+    padding: 10px;
+    background-color: #f4f9fa;
+    cursor: pointer;
+  }
+
+  input::placeholder {
+    text-align: right;
+  }
+
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input#bill:focus,
+  input#person:focus,
+  input#custom:focus {
+    border: 1px solid #25bfab;
+  }
+
+  button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  /* Fim das configurações padrão*/
+
+  #container {
+    display: grid;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    height: 100vh;
+    gap: 16px;
+    margin-top: 2rem;
+  }
+
+  img {
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
+  }
+
+  /* Inicio formatação Main */
+  main {
+    display: grid;
+    gap: 10px;
+  }
+
+  main div {
+    display: grid;
+  }
+
+  main label,
+  main p {
+    font-size: 12px;
+    color: #7f9c9e;
+  }
+
+  main div.bill label input {
+    grid-row: 2/3;
+    background: url('../../assets/icon-dollar.svg') no-repeat left;
+    background-position: 10px;
+    background-color: #f4f9fa;
+    height: 40px;
+  }
+
+  main div.container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10px 40px 40px;
+    gap: 10px;
+  }
+
+  main div.container p {
+    grid-column: 1/4;
+    grid-row: 1/1;
+    margin-bottom: 20px;
+  }
+
+  main div.container button {
+    background-color: #00484c;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  main div.container button:hover {
+    background-color: #9fe8e9;
+    color: #00484c;
+    transition: 0.5s;
+  }
+
+  main div.container input::placeholder {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  main div.people label input {
+    background: url('../../assets/icon-person.svg') no-repeat left;
+    background-position: 10px;
+    background-color: #f4f9fa;
+    height: 40px;
+  }
+  /*Fim formatação main*/
+
+  /*Inicio formtação aside*/
+  aside {
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    background-color: #00484c;
+    border-radius: 12px;
+    padding: 25px;
+    align-items: center;
+    align-content: center;
+  }
+
+  aside div.tip-amount,
+  aside div.total,
+  aside div.grand-total {
+    display: grid;
+  }
+
+  aside div.tip-amount h2,
+  aside div.total h2,
+  aside div.grand-total h2 {
+    grid-column: 2/3;
+    font-weight: 700;
+    color: #25bfab;
+    justify-self: end;
+    margin-left: 16px;
+  }
+
+  aside div.paragraphs {
+    align-self: center;
+  }
+
+  aside p {
+    font-size: 14px;
+    color: #ffffff;
+    grid-row: 1/2;
+  }
+
+  aside p.person,
+  aside p.grand {
+    font-size: 10px;
+    color: #7f9c9e;
+  }
+
+  aside button {
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: #9fe8e9;
+    color: #00484c;
+  }
+
+  aside button:disabled {
+    background-color: #0d686d;
+  }
+
+  /*Fim formatação aside*/
+
+  footer {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    color: #0d686d;
+  }
+  footer p {
+    text-align: center;
+  }
+
+  footer a {
+    color: #00484c;
+  }
+
+  footer a:hover {
+    color: #25bfab;
+    transition: 0.8s;
+    text-decoration: underline;
+  }
+}
